@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&family=Prompt:wght@200&family=Work+Sans:wght@400;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            margin: 0px 80px;
+        }
+
+        .login-p {
+            padding: 180px 0px;
+        }
+
+        .main-box {
+            width: 70%;
+            margin: auto;
+            box-shadow: 0px 0px 5px 0px gray;
+            border-radius: 10px;
+            /* border: 2px solid black; */
+        }
+
+        .inner-main-section {
+            display: flex;
+        }
+
+        .inner-main-section .right-img-section {
+            flex: 2;
+            background: url(images/img15.jpg) no-repeat center;
+            background-size: cover;
+            border-radius: 0px 10px 10px 0px;
+        }
+
+        .inner-main-section .right-img-section img {
+            height: auto;
+            max-width: 100%;
+        }
+
+        .inner-main-section .left-text-section {
+            flex: 1;
+            padding: 30px;
+        }
+
+        .inner-main-section .left-text-section h1 {
+            font-size: 40px;
+            font-family: 'Instrument Sans', sans-serif;
+            padding-bottom: 15px;
+            text-align: center;
+            color: rgb(47, 47, 47);
+        }
+
+        .inner-main-section .left-text-section .input-value {
+            padding: 5px 0px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            height: 45px;
+            width: 100%;
+            padding-left: 15px;
+            border-radius: 50px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type="email"]:focus-visible,
+        input[type="password"]:focus-visible {
+            outline: none;
+        }
+
+        ::placeholder {
+            color: rgb(154, 154, 154);
+            font-size: 14px;
+        }
+
+        .rememberme-forgotpassword {
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: 16px;
+            color: rgb(60, 60, 60);
+            padding-top: 10px;
+            width: 100%;
+            display: flex;
+        }
+
+        .rememberme-forgotpassword .checkbox {
+            flex: 1;
+        }
+
+        .rememberme-forgotpassword .forgot-pass {
+            text-align: right;
+        }
+
+        .rememberme-forgotpassword .forgot-pass a {
+            color: #4267b2;
+        }
+
+        .rememberme-forgotpassword .forgot-pass a:hover {
+            color: #2471eb;
+        }
+
+        .inner-main-section .left-text-section .signin-btn {
+            height: 45px;
+            width: 100%;
+            padding: 10px 0px;
+            margin: 20px 0px;
+            border-radius: 50px;
+            background-color: #2471eb;
+            display: grid;
+            place-content: center;
+        }
+
+        .inner-main-section .left-text-section .signin-btn a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: 17px;
+        }
+
+        .inner-main-section .left-text-section .signin-btn:hover {
+            background-color: #4285F4;
+        }
+
+        .inner-main-section .left-text-section p {
+            text-align: center;
+            font-family: 'Prompt', sans-serif;
+            font-size: 15px;
+            color: rgb(154, 154, 154);
+            padding-bottom: 10px;
+        }
+
+        .inner-main-section .google {
+            width: 100%;
+            padding: 13px;
+            background-color: #4285F4;
+            margin: 10px 0px;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        .inner-main-section .google a {
+            color: white;
+            font-family: 'Instrument Sans', sans-serif;
+        }
+
+        .inner-main-section .google .fa-google {
+            padding-right: 10px;
+            font-size: 20px;
+            color: white;
+        }
+
+        .inner-main-section .google:hover {
+            background-color: #4f90f8;
+        }
+
+        .inner-main-section .facebook {
+            width: 100%;
+            padding: 13px;
+            background-color: #4267b2;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        .inner-main-section .facebook a {
+            color: white;
+            font-family: 'Instrument Sans', sans-serif;
+        }
+
+        .inner-main-section .facebook .fa-facebook-f {
+            padding-right: 10px;
+            font-size: 20px;
+        }
+
+        .inner-main-section .facebook:hover {
+            background-color: #4b76cc;
+        }
+
+        .inner-main-section .left-text-section .register {
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: 16px;
+            color: rgb(154, 154, 154);
+            padding: 10px 0px;
+            text-align: center;
+        }
+
+        .inner-main-section .left-text-section .register a {
+            color: #2471eb;
+        }
+
+        .inner-main-section .left-text-section .register a:hover {
+            color: #4267b2;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="login"> <!--outer box-->
+        <div class="container"> <!--margin in outer box-->
+            <div class="login-p"> <!--padding in outer box-->
+                <div class="main-box"> <!--inner box-->
+                    <div class="inner-main-section"> <!--taken two sections (left & right) of inner box in this class-->
+                        <div class="left-text-section"> <!--left section (text) starts-->
+                            <h1>Sign In</h1>
+                            <form action="#"> <!--form starts-->
+                                <div class="input-value">
+                                    <input type="email" placeholder="Username or email">
+                                </div>
+                                <div class="input-value">
+                                    <input type="password" placeholder="Password">
+                                </div>
+                                <!-- ============ problemo ============== -->
+                                <div class="rememberme-forgotpassword">
+                                    <span class="checkbox">
+                                        <input type="checkbox" id="checkbox">
+                                        <label for="checkbox">Remember me</label>
+                                    </span>
+                                    <span class="forgot-pass">
+                                        <a href="#">Forgot password?</a>
+                                    </span>
+                                </div>
+                                <!-- ============ till here ============= -->
+                                <div class="signin-btn">
+                                    <a href="#">Sign In</a>
+                                </div>
+                            </form> <!--form ends-->
+                            <p>or connect with</p>
+                            <div class="social-media">
+                                <div class="google">
+                                    <a href="#"><span class="fa-brands fa-google"></span></a>
+                                    <span><a href="#">Sign in with google</a></span>
+                                </div>
+                                <div class="facebook">
+                                    <a href=""><span class="fa-brands fa-facebook-f"></span></a>
+                                    <span><a href="#">Sign in with facebook</a></span>
+                                </div>
+                            </div>
+                            <div class="register">
+                                <span>New here?</span>
+                                <span><a href="#"> Create an Account</a></span>
+                            </div>
+                        </div> <!--left section (text) ends-->
+                        <div class="right-img-section"></div> <!--right section (image)-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
